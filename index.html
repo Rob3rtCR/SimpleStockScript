@@ -31,32 +31,39 @@
             <p class="inputs">Ingresa el precio</p>
             <input type="number" name="precio" class="formulario__input" id="precio">
             <br><br>
-            <button onclick="addHtmlTableRow();" class="formulario__submit">Agregar</button>
-            <button onclick="editHtmlTbleSelectedRow();" class="formulario__submit">Editar</button>
-            <button onclick="removeSelectedRow();" class="formulario__submit">Limpiar</button>
+            <button onclick="addHtmlTableRow();" class="formulario__submit">
+                <p class="boton">Agregar</p>
+            </button>
+            <button onclick="editHtmlTbleSelectedRow();" class="formulario__submit">
+                <p class="boton">Editar</p>
+            </button>
+            <button onclick="removeSelectedRow();" class="formulario__submit">
+                <p class="boton">Eliminar</p>
+            </button>
         </div>
         <div class="container">
+            <p class="TituloPag">Stock Registrado</p>
             <div class="tab tab-1">
-                <table id="table" border="1">
-                    <tr>
+                <table class="table" id="table" border="1">
+                    <tr class="celda">
                         <th>Nombre</th>
                         <th>Detalle</th>
                         <th>Cantidad</th>
                         <th>Precio</th>
                     </tr>
-                    <tr>
+                    <tr class="celda">
                         <td>N1</td>
                         <td>D1</td>
                         <td>C1</td>
                         <td>P1</td>
                     </tr>
-                    <tr>
+                    <tr class="celda">
                         <td>N2</td>
                         <td>D2</td>
                         <td>C2</td>
                         <td>P2</td>
                     </tr>
-                    <tr>
+                    <tr class="celda">
                         <td>N3</td>
                         <td>D3</td>
                         <td>C3</td>
