@@ -31,7 +31,7 @@
             <p class="inputs">Ingresa el precio</p>
             <input type="number" name="precio" class="formulario__input" id="precio">
             <br><br>
-            <button onclick="addHtmlTableRow();" class="formulario__submit">
+            <button onclick="addHtmlTableRow();" class="formulario__submit" id="calcular">
                 <p class="boton">Agregar</p>
             </button>
             <button onclick="editHtmlTbleSelectedRow();" class="formulario__submit">
@@ -42,39 +42,45 @@
             </button>
         </div>
         <div class="container">
-            <p class="TituloPag">Stock Registrado</p>
-            <div class="tab tab-1">
+            <p class="TituloStock">Stock Registrado</p>
+            <div class="tabtab-1" id="stock">
                 <table class="table" id="table" border="1">
                     <tr class="celda">
                         <th>Nombre</th>
                         <th>Detalle</th>
                         <th>Cantidad</th>
                         <th>Precio</th>
+                        <th>IVA</th>
                     </tr>
                     <tr class="celda">
                         <td>N1</td>
                         <td>D1</td>
                         <td>01</td>
                         <td>11</td>
+                        <td>21</td>
                     </tr>
                     <tr class="celda">
                         <td>N2</td>
                         <td>D2</td>
                         <td>02</td>
                         <td>12</td>
+                        <td>22</td>
                     </tr>
                     <tr class="celda">
                         <td>N3</td>
                         <td>D3</td>
                         <td>03</td>
                         <td>13</td>
+                        <td>23</td>
                     </tr>
+                    <p class="TituloStock">IVA: <span id="resultado">0</span></p>
                 </table>
             </div>
     </h1>
     <script>
         var rIndex,
 table = document.getElementById("table");
+//---- chequeo que los inputs no esten vacios
 function checkEmptyInput()
 {
     var isEmpty = false,
@@ -102,7 +108,7 @@ function checkEmptyInput()
     return isEmpty;
 }
     
-// add Row
+// agregar producto
 function addHtmlTableRow()
 {
     if(!checkEmptyInput()){
@@ -110,19 +116,21 @@ function addHtmlTableRow()
         cell1 = newRow.insertCell(0),
         cell2 = newRow.insertCell(1),
         cell3 = newRow.insertCell(2),
-        cell4 = newRow.insertCell(3),
+        cell4 = newRow.insertCell(3)
+        cell5 = newRow.insertCell(4)
         nombreProduct = document.getElementById("nombreProduct").value,
         detalle = document.getElementById("detalle").value,
         cantidad = document.getElementById("cantidad").value;
         precio = document.getElementById("precio").value;
+        resultado = document.getElementById("resultado").value;
     
     cell1.innerHTML = nombreProduct;
     cell2.innerHTML = detalle;
     cell3.innerHTML = cantidad;
     cell4.innerHTML = precio;
-
+    cell5.innerHTML = resultado;
     selectedRowToInput();
-}
+    }
 }
 
 function selectedRowToInput()
@@ -132,12 +140,12 @@ function selectedRowToInput()
     {
         table.rows[i].onclick = function()
         {
-          // get the seected row index
             rIndex = this.rowIndex;
             document.getElementById("nombreProduct").value = this.cells[0].innerHTML;
             document.getElementById("detalle").value = this.cells[1].innerHTML;
             document.getElementById("cantidad").value = this.cells[2].innerHTML;
             document.getElementById("precio").value = this.cells[3].innerHTML;
+            document.getElementById("resultado").value = this.cells[4].innerHTML;
         };
     }
 }
@@ -149,6 +157,7 @@ function editHtmlTbleSelectedRow()
         detalle = document.getElementById("detalle").value,
         cantidad = document.getElementById("cantidad").value;
         precio = document.getElementById("precio").value;
+        resultado = document.getElementById("resultado").value;
     if(!checkEmptyInput()){
         table.rows[rIndex].cells[0].innerHTML = nombreProduct;
         table.rows[rIndex].cells[1].innerHTML = detalle;
@@ -165,7 +174,10 @@ function removeSelectedRow()
     document.getElementById("detalle").value = "";
     document.getElementById("cantidad").value = "";
     document.getElementById("precio").value = "";
+    document.getElementById("resultado").value = "";
 }
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

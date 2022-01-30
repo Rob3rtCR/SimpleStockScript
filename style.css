@@ -33,7 +33,7 @@ button:hover {
 }
 .formulario {
     border-radius: 7px;
-    width: 700px;
+    width: 900px;
     max-width: 100%;
     margin: auto;
     margin-top: 30px;
@@ -95,6 +95,15 @@ button:hover {
     text-align: center;
     margin-top: 2px;
 }
+.TituloStock {
+    margin-top: 20px;
+    text-shadow: 2px 2px 2px rgba(151, 16, 16, 0.431);
+    font-style: inherit;
+    font-stretch: initial;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
 .Logo{
     display: block;
     margin: auto;
@@ -134,7 +143,7 @@ input:hover{
 }
 .container{
     border-radius: 7px;
-    width: 700px;
+    width: 900px;
     max-width: 100%;
     margin: auto;
     margin-top: 30px;
@@ -147,7 +156,9 @@ input:hover{
     position: relative;
     box-shadow: 0 0 20px 1px rgba(190, 3, 3, 0.2);
 }
-
+.tabtab-1 {
+    margin: auto;
+}
 .tab{float: left;}
 .tab-2{margin-left: 50px}
 .tab-2 input{display: block;margin-bottom: 10px}
