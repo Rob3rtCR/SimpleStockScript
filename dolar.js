@@ -22,7 +22,7 @@ function obtenerDatos (){
         for(let item of datos.serie){
             i++;
             result.innerHTML += `<li class="cotizacion">${item.fecha.substr(0,10)} | $ ${item.valor}</li>`;
-            if(i>6exit){
+            if(i>6){
                 break;
             }
             }

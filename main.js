@@ -2,7 +2,7 @@
 //(selector)
 //.accion
 $(function(){
-    $('.container').mouseenter(function(){
+    $('.TituloStock').mouseenter(function(){
         $("#stock").slideDown();
     })
     $('.container').mouseleave(function(){

@@ -30,7 +30,7 @@
             <input type="number" name="cantidad" class="formulario__input" id="cantidad">
             <br><br>
             <p class="inputs">Ingresa el precio</p>
-            <input type="number" name="precio" class="formulario__input" id="precio">
+            <input type="number" name="precio" class="formulario__input" id="precio" step=".01">
             <br><br>
             <button onclick="addHtmlTableRow();" class="formulario__submit" id="calcular">
                 <p class="boton">Agregar</p>
@@ -51,28 +51,24 @@
                         <th>Detalle</th>
                         <th>Cantidad</th>
                         <th>Precio</th>
-                        <th>IVA</th>
                     </tr>
                     <tr class="celda">
-                        <td>N1</td>
-                        <td>D1</td>
-                        <td>01</td>
-                        <td>11</td>
-                        <td>21</td>
+                        <td>Nombre del producto</td>
+                        <td>Cantidad de producto</td>
+                        <td>00</td>
+                        <td>0.00</td>
                     </tr>
                     <tr class="celda">
                         <td>N2</td>
                         <td>D2</td>
                         <td>02</td>
                         <td>12</td>
-                        <td>22</td>
                     </tr>
                     <tr class="celda">
                         <td>N3</td>
                         <td>D3</td>
                         <td>03</td>
                         <td>13</td>
-                        <td>23</td>
                     </tr>
                 </table>
             </div>

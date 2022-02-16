@@ -9,7 +9,6 @@
                 detalle = document.getElementById("detalle").value,
                 cantidad = document.getElementById("cantidad").value;
                 precio = document.getElementById("precio").value;
-                precio = document.getElementById("resultado").value;
         
             if(nombreProduct === ""){
                 alert("El nombre no puede estar vacio");
@@ -39,18 +38,15 @@
                 cell2 = newRow.insertCell(1),
                 cell3 = newRow.insertCell(2),
                 cell4 = newRow.insertCell(3)
-                cell5 = newRow.insertCell(4)
                 nombreProduct = document.getElementById("nombreProduct").value,
                 detalle = document.getElementById("detalle").value,
                 cantidad = document.getElementById("cantidad").value;
                 precio = document.getElementById("precio").value;
-                resultado = document.getElementById("resultado").value;
             
             cell1.innerHTML = nombreProduct;
             cell2.innerHTML = detalle;
             cell3.innerHTML = cantidad;
             cell4.innerHTML = precio;
-            cell5.innerHTML = resultado;
             selectedRowToInput();
             }
         }
@@ -67,7 +63,6 @@
                     document.getElementById("detalle").value = this.cells[1].innerHTML;
                     document.getElementById("cantidad").value = this.cells[2].innerHTML;
                     document.getElementById("precio").value = this.cells[3].innerHTML;
-                    document.getElementById("resultado").value = this.cells[4].innerHTML;
                 };
             }
         }
@@ -79,13 +74,11 @@
                 detalle = document.getElementById("detalle").value,
                 cantidad = document.getElementById("cantidad").value;
                 precio = document.getElementById("precio").value;
-                resultado = document.getElementById("resultado").value;
             if(!checkEmptyInput()){
                 table.rows[rIndex].cells[0].innerHTML = nombreProduct;
                 table.rows[rIndex].cells[1].innerHTML = detalle;
                 table.rows[rIndex].cells[2].innerHTML = cantidad;
                 table.rows[rIndex].cells[3].innerHTML = precio;
-                table.rows[rIndex].cells[4].innerHTML = resultado;
             }
         }
         
@@ -97,5 +90,4 @@
             document.getElementById("detalle").value = "";
             document.getElementById("cantidad").value = "";
             document.getElementById("precio").value = "";
-            document.getElementById("resultado").value = "";
         }
